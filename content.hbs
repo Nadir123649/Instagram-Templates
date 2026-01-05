@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel Slide - Content</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    {{> base-styles}}
+
+    .overlay {
+      background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 100%);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .badge {
+      margin-bottom: 60px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide-title {
+      font-family: '{{config.titleFont}}', sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      color: {{config.primaryColor}};
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .slide-subtitle {
+      font-family: '{{config.titleFont}}', sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      color: {{config.textColor}};
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 50px;
+    }
+
+    .content-box {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .content-text {
+      font-size: 26px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="badge">{{config.badge}}</div>
+    <div class="main-content">
+      <div class="slide-title">{{titleFirstPart}}</div>
+      <div class="slide-subtitle">{{titleSecondPart}}</div>
+      <div class="content-box">
+        <div class="content-text">{{slide.content}}</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="author-name">{{config.authorName}}</div>
+      <div class="swipe-btn">Swipe →</div>
+    </div>
+  </div>
+</body>
+</html>
+

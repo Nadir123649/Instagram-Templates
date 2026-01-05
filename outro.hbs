@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel Slide - Outro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    {{> base-styles}}
+
+    .overlay {
+      background: linear-gradient(to left, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.3) 100%);
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .profile-section {
+      display: {{#if profileImageUrl}}block{{else}}none{{/if}};
+    }
+
+    .profile-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, transparent 100%);
+    }
+
+    .content-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 60px;
+      padding-right: {{#if profileImageUrl}}40px{{else}}60px{{/if}};
+    }
+
+    .badge {
+      margin-bottom: 40px;
+    }
+
+    .text-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cta-title {
+      font-family: '{{config.titleFont}}', sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      color: {{config.primaryColor}};
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .cta-subtitle {
+      font-size: 24px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+    }
+
+    .cta-subtitle .highlight {
+      color: {{config.primaryColor}};
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    {{#if profileImageUrl}}
+    <div class="profile-section">
+      <img class="profile-image" src="{{profileImageUrl}}" alt="Profile">
+      <div class="profile-gradient"></div>
+    </div>
+    {{/if}}
+    <div class="content-section">
+      <div class="badge">{{config.badge}}</div>
+      <div class="text-content">
+        <div class="cta-title">{{data.outroSlide.ctaTitle}}</div>
+        <div class="cta-subtitle">{{{ctaSubtitleFormatted}}}</div>
+      </div>
+      <div class="footer">
+        <div class="author-name">{{config.authorName}}</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

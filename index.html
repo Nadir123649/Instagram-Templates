@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <title>Template</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .template-main {
+            max-width: 1080px;
+            width: 100%;
+            min-height: 1350px;
+            background-image: url("/images/banner-bg.png");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .badge-title {
+            color: #FFFFFF;
+            font-size: 26px;
+            line-height: 100%;
+            font-family: "Manrope", sans-serif;
+            display: inline-block;
+            align-self: flex-start;
+            font-weight: 300;
+            display: inline-block;
+            align-self: flex-start;
+        }
+
+        .footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .author-name {
+            font-size: 23px;
+            line-height: 96%;
+            color: #FFFFFF;
+            font-family: "Manrope", sans-serif;
+            font-weight: 400;
+        }
+
+        .swipe-btn {
+            max-width: 166px;
+            height: 55px;
+            width: 100%;
+            border-radius: 38.66px;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Manrope", sans-serif;
+            font-weight: 400;
+            gap: 12px;
+            color: #ffffffd0;
+            line-height: 96%;
+            font-size: 23px;
+            font-weight: 600;
+            border: 1.29px solid #FFFFFF;
+            background-color: #00000056;
+        }
+
+        .profile-section {
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            right: 0;
+            width: 45%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .profile-image {
+            max-height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .overlay {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.01) 50%, rgba(0, 0, 0, 0.1) 100%);
+        }
+
+        .container {
+            height: 100%;
+            max-width: 1080px;
+            width: 100%;
+            display: flex;
+            position: absolute;
+        }
+
+        .content-section {
+            flex: 1;
+            display: flex;
+            z-index: 1;
+            position: relative;
+            flex-direction: column;
+            padding: 60px;
+            height: 100%;
+        }
+
+        .text-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .tagline {
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: #FFFFFF;
+            font-weight: 300;
+            font-family: "Manrope", sans-serif;
+            line-height: 100%;
+        }
+
+        .tagline b {
+            font-weight: bold;
+        }
+
+        .tagline .highlight {
+            font-weight: bold;
+        }
+
+        .hook-title {
+            font-size: 126px;
+            font-weight: 400;
+            font-family: "League Gothic", sans-serif;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom,
+                    #B58A4E 0%,
+                    #FED6A0 50%,
+                    #936615 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
+            line-height: 100%;
+            margin-bottom: 0px;
+
+        }
+
+        .hook-subtitle {
+            font-size: 126px;
+            font-weight: 400;
+            font-family: "League Gothic", sans-serif;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-top: -10px;
+            letter-spacing: -2px;
+            line-height: 100%;
+            position: relative;
+            z-index: -1;
+        }
+
+        .swipe {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="template-main">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="profile-section">
+                <img class="profile-image" src="/images/author-image.png" alt="Profile">
+            </div>
+            <div class="content-section">
+                <div class="badge-title">Automatisation</div>
+                <div class="text-content">
+                    <div class="tagline">J’aide les PME industrielles à <b>réduire leurs coûts</b></div>
+                    <div class="hook-title">OPÉRATIONNELS</div>
+                    <div class="hook-subtitle">90 JOURS CHRONO</div>
+                </div>
+                <div class="footer">
+                    <div class="author-name">Nicolas Duchemann</div>
+                    <div class="swipe-btn">
+                        Swipe
+                        <img class="swipe" src="/images/swiper.svg" alt="Swipe">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
