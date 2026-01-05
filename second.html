@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Manrope:wght@200..800&display=swap"
         rel="stylesheet">
 
-    <title>Template</title>
+    <title>Second Template</title>
 
     <style>
         * {
@@ -54,8 +54,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
-            z-index: 3;
         }
 
         .author-name {
@@ -91,6 +89,7 @@
             bottom: 0;
             height: 100%;
             right: 0;
+            z-index: 2;
             width: 45%;
             display: flex;
             align-items: flex-end;
@@ -130,7 +129,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: -70px;
+            margin-top: -10px;
         }
 
         .tagline {
@@ -150,7 +149,7 @@
             font-weight: bold;
         }
 
-        .hook-title {
+        .slide-title {
             font-size: 126px;
             font-weight: 400;
             font-family: "League Gothic", sans-serif;
@@ -167,7 +166,7 @@
 
         }
 
-        .hook-subtitle {
+        .slide-subtitle {
             font-size: 126px;
             font-weight: 400;
             font-family: "League Gothic", sans-serif;
@@ -185,6 +184,26 @@
             width: auto;
             height: auto;
         }
+
+        .content-box {
+            border: 1.29px solid #FFFFFF;
+            background-color: #00000056;
+            min-height: 534px;
+            margin-top: 42px;
+            max-width: 703px;
+            width: 100%;
+            border-radius: 38.66px;
+            padding: 80px 60px;
+        }
+
+        .content-text {
+            font-size: 35px;
+            line-height: 103%;
+            letter-spacing: -1px;
+            font-family: "Manrope", sans-serif;
+            font-weight: 300;
+            color: #FFFFFF;
+        }
     </style>
 </head>
 
@@ -192,15 +211,18 @@
     <div class="template-main">
         <div class="overlay"></div>
         <div class="container">
-            <div class="profile-section">
-                <img class="profile-image" src="/images/author-image.png" alt="Profile">
-            </div>
             <div class="content-section">
                 <div class="badge-title">Automatisation</div>
                 <div class="text-content">
-                    <div class="tagline">J’aide les PME industrielles à <b>réduire leurs coûts</b></div>
-                    <div class="hook-title">OPÉRATIONNELS</div>
-                    <div class="hook-subtitle">90 JOURS CHRONO</div>
+                    <div class="slide-title">HACK EXPRESS</div>
+                    <div class="slide-subtitle">LE SCRAPPING</div>
+                    <div class="content-box">
+                        <div class="content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                        </div>
+                    </div>
                 </div>
                 <div class="footer">
                     <div class="author-name">Nicolas Duchemann</div>
